@@ -1,0 +1,100 @@
+/* الحاوية الرئيسية */
+.ach-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 20px;
+    flex-direction: row-reverse; /* عكس الاتجاه الافتراضي لجعل الصور على اليسار */
+  }
+  
+  /* تنسيق صورة الإنجازات */
+  .ach-image-container {
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* إضافة تأثير الانتقال للتكبير والظل */
+  }
+  
+  .ach-image {
+    margin-left: 30px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 360px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* تأثير الانتقال عند وضع المؤشر */
+  }
+  
+  /* تأثير التكبير والتدوير عند وضع الماوس */
+  .ach-image-container:hover .ach-image {
+    transform: scale(1.1) rotate(5deg); /* تكبير الصورة مع تدويرها */
+    filter: brightness(1.2); /* زيادة السطوع */
+  }
+  
+  
+  /* تنسيق النصوص */
+  .ach-text-container {
+    flex: 2;
+    text-align: left;
+    padding: 30px; /* مسافة داخل المستطيل */
+    display: flex;
+    flex-direction: column; /* النصوص مرتبة بالطول */
+    gap: 10px; /* مسافة بين النصوص */
+    max-width: 500px; /* عرض أقصى للنصوص */
+    margin-top: 200px;
+  }
+  
+  .ach-text-container h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #82B4FF, #BFF0FF); /* تدرج لوني للنص */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ach-text-container p {
+    
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif; /* تغيير الخط */
+  }
+  
+ /* لجعل الصفحة متجاوبة */
+@media (max-width: 768px) {
+    .ach-container {
+      flex-direction: row-reverse; /* اجعل النصوص على اليسار والصورة على اليمين */
+      text-align: left; /* محاذاة النصوص لليسار */
+      align-items: center; /* محاذاة العناصر عموديًا */
+      gap: 0px; /* مسافة بين النص والصورة */
+    }
+  
+    .ach-text-container {
+
+      max-width: 100%; /* اجعل المستطيل يأخذ جزءًا من الشاشة */
+      margin: 0; /* إزالة التوسيط العمودي */
+      padding: 0px; /* مسافة داخلية للنصوص */
+      margin-top: -100px;
+      padding-top: 90px;
+    }
+  
+    .ach-image {
+      max-width: 290px; /* تقليل عرض الصورة */
+      width: 210px;
+      height: auto; /* الحفاظ على النسبة */
+     margin-top: 150px;
+      
+    }
+  
+    .ach-text-container h1 {
+      font-size: 1.8rem; /* تصغير حجم العنوان */
+      margin-top: 70px;
+    }
+  
+    .ach-text-container p {
+      font-size: 0.8rem; /* تصغير النصوص */
+
+    }
+  }
+  
+  

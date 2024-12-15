@@ -1,0 +1,235 @@
+/* إضافة الخط Space Mono إلى الصفحة بأكملها */
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+/* تنسيق قسم الـ Skills */
+.skills {
+  padding: 50px 20px;
+  text-align: center;
+  opacity: 0; /* تبدأ كل المهارات مخفية */
+  transition: opacity 1s ease-in-out; /* التأثير عند الظهور */
+}
+
+.skills.show {
+  opacity: 1; /* تظهر المهارات تدريجياً عند الظهور في الصفحة */
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DBA6F4;
+  margin-bottom: 30px;
+  font-family: 'Space Mono', monospace; /* إضافة خط Space Mono */
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap; /* يسمح للعناصر بالانتقال إلى السطر التالي */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* تنسيق كل مستطيل لمهارة */
+.skill-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* تقليص الحشو */
+  min-width: 100px; /* تحديد الحد الأدنى للعرض */
+  min-height: 50px; /* تحديد الحد الأدنى للارتفاع */
+  border: 1px solid #8b00cb; /* جعل الحدود أرفع */
+  color: #ffffff; /* لون النص */
+  font-size: 0.9rem; /* تصغير حجم الخط */
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px; /* جعل الحواف مستديرة */
+  opacity: 0; /* تبدأ كل المهارات مخفية */
+  transform: translateY(20px); /* تبدأ من أسفل */
+  transition: opacity 0.5s, transform 0.5s, background-color 0.3s; /* التأثير عند الظهور */
+  white-space: nowrap; /* عدم التفاف النص */
+  font-family: 'Space Mono', monospace; /* إضافة خط Space Mono */
+}
+
+/* إضافة تأثير التكبير عند وقوف المؤشر */
+.skill-box:hover {
+  transform: scale(1.1); /* تكبير العنصر قليلاً */
+  background-color: #ff75a0; /* تغيير لون الخلفية عند الوقوف */
+  box-shadow: 0 4px 10px rgba(139, 0, 203, 0.5); /* إضافة ظل */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* التأثير عند الوقوف */
+}
+
+/* إضافة تأخير لكل عنصر لتظهر المهارات تدريجياً */
+.skills.show .skill-box:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.skills.show .skill-box:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.skills.show .skill-box:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.skills.show .skill-box:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.skills.show .skill-box:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.skills.show .skill-box:nth-child(6) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.skills.show .skill-box:nth-child(7) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.skills.show .skill-box:nth-child(8) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.skills.show .skill-box:nth-child(9) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+.skills.show .skill-box:nth-child(10) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+/* ترتيب الأعمدة: 6 فوق و 4 تحت */
+.skills-grid .skill-box:nth-child(-n+6) {
+  flex-basis: auto; /* عرض العناصر يعتمد على محتواها */
+}
+
+.skills-grid .skill-box:nth-child(n+7) {
+  flex-basis: auto; /* عرض العناصر يعتمد على محتواها */
+}
+
+/* ميديا ريسبونسف لتصغير النص والعناصر في الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .skill-box {
+    min-width: 80px; /* تقليص العرض في الشاشات الصغيرة */
+    min-height: 40px; /* تقليص الارتفاع في الشاشات الصغيرة */
+    padding: 8px 16px; /* تقليص الحشو في الشاشات الصغيرة */
+    font-size: 0.8rem; /* تقليص حجم الخط في الشاشات الصغيرة */
+  }
+  .skills-grid .skill-box {
+    flex-basis: 45%; /* لجعل العناصر أكثر ملائمة للعرض */
+  }
+}
+/* إضافة الخط Space Mono إلى الصفحة بأكملها */
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+/* تنسيق قسم الـ Skills */
+.skills {
+  padding: 50px 20px;
+  text-align: center;
+  opacity: 0; /* تبدأ كل المهارات مخفية */
+  transition: opacity 1s ease-in-out; /* التأثير عند الظهور */
+}
+
+.skills.show {
+  opacity: 1; /* تظهر المهارات تدريجياً عند الظهور في الصفحة */
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DBA6F4;
+  margin-bottom: 30px;
+  font-family: 'Space Mono', monospace;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* تنسيق كل مستطيل لمهارة */
+.skill-box {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  min-width: 100px;
+  min-height: 50px;
+  border: 1px solid #8b00cb;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  white-space: nowrap;
+  font-family: 'Space Mono', monospace;
+}
+
+/* إضافة تأخير لكل عنصر لتظهر المهارات تدريجياً */
+.skills.show .skill-box:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.skills.show .skill-box:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+/* ترتيب الأعمدة */
+.skills-grid .skill-box {
+  flex-basis: auto;
+}
+
+/* تأثير عند المرور على المهارة */
+.skill-box:hover {
+  transform: scale(1.1); /* تكبير العنصر عند الوقوف عليه */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .skill-box {
+    min-width: 80px;
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  .skills-grid .skill-box {
+    flex-basis: 45%;
+  }
+}

@@ -1,0 +1,112 @@
+/* استيراد الخط Inter من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.footer-container {
+  background-color: #282c34;  /* خلفية داكنة */
+  color: #fff;  /* نص أبيض */
+  padding: 30px 10%;  /* حشوة على الأطراف */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about, .footer-socials, .footer-contact {
+  max-width: 300px;
+  text-align: left;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about p {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-socials h3, .footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links li {
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links a {
+  color: #D19EF6;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links a:hover {
+  color: #af00bc; /* تغيير اللون عند التمرير */
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover .social-icon {
+  transform: scale(1.1);  /* تكبير الأيقونة عند التمرير */
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  width: 100%;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+/* التأكد من التوافق مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+  }
+
+  .footer-about, .footer-socials, .footer-contact {
+      max-width: 100%;
+      text-align: center;
+      font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
